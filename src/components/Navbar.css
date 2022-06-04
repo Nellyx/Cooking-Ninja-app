@@ -1,3 +1,23 @@
 .navbar {
   background-color: #58249c;
+  padding: 20px;
+  color: white;
 }
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  color: #ffff;
+  margin: auto;
+  background-color: green;
+}
+
+.navbar   nav .barand{
+
+ 
+
+	
+}
+
+
