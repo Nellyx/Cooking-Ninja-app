@@ -10,14 +10,26 @@
   max-width: 1200px;
   color: #ffff;
   margin: auto;
-  background-color: green;
 }
 
-.navbar   nav .barand{
-
- 
-
-	
+.navbar nav a.brand {
+  margin-right: auto;
+  color: #ffff;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 5px;
 }
 
+.navbar a:last-child {
+  color: #ffff;
+  text-decoration: none;
+  margin-left: 40px;
+  padding: 8px;
+  border: 1px solid #ffff;
+  border-radius: 4px;
+}
 
+.navbar a:last-child:hover {
+  background: #fff;
+  color: #333;
+}
