@@ -12,13 +12,11 @@ import Recipe from "./pages/recipe/Recipe";
 import Create from "./pages/create/Create";
 import Navbar from "./components/Navbar";
 
-
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
-        
 
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
