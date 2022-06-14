@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const useFetch = (url, method = "GET") => {
   const [data, setdata] = useState(null);
   const [ispending, setispending] = useState(false);
   const [error, seterror] = useState(null);
+
+  const [options, setoptions] = useState(null);
 
   useEffect(() => {
     const fetchdata = async () => {
@@ -17,9 +19,9 @@ const useFetch = (url) => {
           throw new Error(response.statusText);
         }
 
-        const json = await response.json();
+        const data = await response.json();
         setispending(false);
-        setdata(json);
+        setdata(data);
       } catch (error) {
         setispending(false);
         console.log(error);

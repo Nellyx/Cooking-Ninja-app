@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Route } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./Recipe.css"
 
@@ -10,7 +10,7 @@ function Recipe() {
   const url = "http://localhost:3000/recipes/" + id;
   const { data: recipe, ispending, error } = useFetch(url);
 
-  return (
+return (
     <div className="recipe">
       {ispending && <p>Loading....</p>}
       {error && <p>{error}</p>}
