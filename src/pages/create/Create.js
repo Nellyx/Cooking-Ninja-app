@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Create.css";
 
 import "./Create.css";
 import useFetch from "../../hooks/useFetch";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
   const [title, settitle] = useState("");
@@ -11,6 +12,8 @@ function Create() {
   const [newIngredient, setnewIngredient] = useState("");
   const [ingredients, setingredients] = useState([]);
   const ingredientInput = useRef(null);
+
+  const navigate = useNavigate();
 
   const { postData, data, error } = useFetch(
     "http://localhost:3000/recipes",
@@ -41,6 +44,14 @@ function Create() {
     ingredientInput.current.focus();
     console.log(ingredients);
   };
+
+  // to navigate to the home route after submission
+
+  useEffect(() => {
+    if (data) {
+      navigate("/");
+    }
+  }, [data]);
 
   return (
     <div className="create">

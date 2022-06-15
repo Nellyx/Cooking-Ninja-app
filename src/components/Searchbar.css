@@ -1,0 +1,19 @@
+.searhbar .form {
+  display: flex;
+  align-items: center;
+}
+
+.searhbar .btn {
+  margin-right: 5px;
+  padding: 11px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+
+
+
+
