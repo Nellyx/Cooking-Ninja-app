@@ -5,15 +5,29 @@ const useFetch = (url, method = "GET") => {
   const [data, setdata] = useState(null);
   const [ispending, setispending] = useState(false);
   const [error, seterror] = useState(null);
-
   const [options, setoptions] = useState(null);
 
+  const postData = postData => {
+    setoptions({
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(postData)
+    });
+  };
+
   useEffect(() => {
-    const fetchdata = async () => {
+    const controller = new AbortController();
+
+    const fetchData = async fetchoptions => {
       setispending(true);
 
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          ...fetchoptions,
+          signal: controller.signal
+        });
 
         if (!response.ok) {
           throw new Error(response.statusText);
@@ -29,10 +43,20 @@ const useFetch = (url, method = "GET") => {
       }
     };
 
-    fetchdata();
-  }, [url]);
+    if (method === "GET") {
+      fetchData();
+    }
 
-  return { data, ispending, error };
+    if (method === "POST" && options) {
+      fetchData(options);
+    }
+
+    return () => {
+      controller.abort();
+    };
+  }, [url, options, method]);
+
+  return { data, ispending, error, postData };
 };
 
 export default useFetch;

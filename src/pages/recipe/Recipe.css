@@ -5,6 +5,16 @@
   background-color: #fff;
   padding: 40px;
   box-sizing: border-box;
+  border: 2px solid #58249c;
+  border-radius: 6px;
+}
+
+.recipe h2 {
+  color: #58249c;
+}
+
+.recipe p {
+  margin: 25px;
 }
 
 .recipe ul {

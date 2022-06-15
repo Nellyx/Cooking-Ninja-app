@@ -21,7 +21,7 @@
 }
 
 .recipe-list .card h3 {
-  color: #5555;
+  color: #555;
   margin-bottom: 6px;
 }
 
@@ -30,7 +30,7 @@
   font-size: 0.9em;
 }
 .recipe-list .card .method {
-  color: #5555;
+  color: #555;
   font-size: 0.7em;
   margin: 20px 0px;
   line-height: 1.5em;
@@ -38,14 +38,37 @@
 
 .recipe-list .card a {
   text-decoration: none;
-  color: #5555;
+  color: #fff;
   display: block;
-  background: #e2e2e2;
+  background: #58249c;
   font-size: 0.9rem;
   text-align: center;
   width: 100px;
   width: 120px;
-  padding: 8px;
+  padding: 10px 8px;
   border-radius: 4px;
   margin: 20px auto 0;
+}
+
+.recipe-list .card a:hover {
+  background-color: #fff;
+  border: 0.1px solid #58249c;
+  color: #58249c;
+}
+
+.recipe-list .card .btn {
+  text-align: center;
+  align-items: center;
+  margin-left: 100px;
+  padding: 10px 24px;
+  background-color: white;
+  border: 1px solid #58249c;
+  margin-top: 12px;
+  color: #58249c;
+  border-radius: 4px;
+}
+
+.recipe-list .card .btn:hover {
+  background: #58249c;
+  color: #ffff;
 }

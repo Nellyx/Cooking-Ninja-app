@@ -1,30 +1,29 @@
 import React from "react";
-import { useParams, Route } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import "./Recipe.css"
-
 import "./Recipe.css";
+import { useParams } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 function Recipe() {
   const { id } = useParams();
   const url = "http://localhost:3000/recipes/" + id;
-  const { data: recipe, ispending, error } = useFetch(url);
+  const { data: recipes, error, ispending } = useFetch(url);
 
-return (
+  return (
     <div className="recipe">
-      {ispending && <p>Loading....</p>}
+      {ispending && <p>Loading Loading Loading</p>}
       {error && <p>{error}</p>}
 
-      {recipe && (
+      {recipes && (
         <>
-          <h2 className="page-title">{recipe.title}</h2>
-          <p>Takes {recipe.cookingTime} to cook..</p>
+          <h2>{recipes.title}</h2>
+          <p>Takes {recipes.cookingTime} to cook..</p>
+
           <ul>
-            {recipe.ingredients.map((ingredient) => (
-              <li key={ingredient}>{ingredient}</li>
+            {recipes.ingredients.map(ingredient => (
+              <li key="ingredient">{ingredient}</li>
             ))}
           </ul>
-          <p className="method">{recipe.method}</p>
+          <p className="method">{recipes.method}</p>
         </>
       )}
     </div>
