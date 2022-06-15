@@ -1,6 +1,6 @@
 // style
 import "./RecipeList.css";
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 function RecipeList({ recipes }) {

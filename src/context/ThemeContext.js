@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
 
 export const ThemeContext = createContext();
 
@@ -6,8 +6,9 @@ export function ThemeProvider({ children }) {
   // custom logic
 
   return (
-    <ThemeContext.Provider value={{ color: "blue" }}>
+    <ThemeContext.Provider value={{ color: "red" }}>
       {children}
     </ThemeContext.Provider>
   );
 }
+ 
