@@ -4,19 +4,21 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  NavLink,
+  NavLink
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Search from "./pages/search/Search";
 import Recipe from "./pages/recipe/Recipe";
 import Create from "./pages/create/Create";
 import Navbar from "./components/Navbar";
+import Themeselector from "./components/Themeselector";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
+        <Themeselector />
 
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
