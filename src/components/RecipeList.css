@@ -1,7 +1,7 @@
 .recipe-list {
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 1200px;
   margin: 40px auto;
   padding-bottom: 30px;
