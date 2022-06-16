@@ -14,3 +14,13 @@
   margin-left: 15px;
   border-radius: 50%;
 }
+
+.mode-toggler {
+  margin-right: auto;
+}
+
+.mode-toggler img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
