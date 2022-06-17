@@ -41,3 +41,8 @@
   text-align: left;
   line-height: 1.5em;
 }
+
+.recipe.dark {
+  background: #3333;
+  color: #fff;
+}
