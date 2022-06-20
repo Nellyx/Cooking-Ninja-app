@@ -46,3 +46,39 @@
   background: #3333;
   color: #fff;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .recipe {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #58249c;
+    border-radius: 6px;
+    text-align: center
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+  }
+}

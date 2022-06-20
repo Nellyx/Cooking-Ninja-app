@@ -84,3 +84,102 @@
 .recipe-list .card.dark div {
   color: #e4e4e4;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+
+  .recipe-list .card {
+    background: #ffff;
+    padding: 20px;
+    border-radius: 7px;
+    color: #333333;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+
+  .recipe-list .card {
+    background: #ffff;
+    padding: 20px;
+    border-radius: 7px;
+    color: #333333;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 450px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 892px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+
+  .recipe-list .card {
+    background: #ffff;
+    padding: 20px;
+    border-radius: 7px;
+    color: #333333;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 360px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+
+  .recipe-list .card {
+    background: #ffff;
+    padding: 20px;
+    border-radius: 7px;
+    color: #333333;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+
+    width: 300px;
+  }
+}
