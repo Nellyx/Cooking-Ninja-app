@@ -25,45 +25,12 @@
   cursor: pointer;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .theme-selector {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-width: 500px;
-    margin: 20px auto;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .theme-selector {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 668px;
-    margin: 20px auto;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .theme-selector {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 892px;
-    margin: 20px auto;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .theme-selector {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 1200px;
+    max-width: 1050px;
     margin: 20px auto;
   }
 }
