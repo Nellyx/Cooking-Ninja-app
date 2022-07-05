@@ -4,6 +4,7 @@ import "./Create.css";
 import "./Create.css";
 import useFetch from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../hooks/useTheme";
 
 function Create() {
   const [title, settitle] = useState("");
@@ -53,13 +54,17 @@ function Create() {
     }
   }, [data]);
 
+  const { mode } = useTheme();
+
   return (
     <div className="create">
-      <h2 className="page-title">Add a New Recipe</h2>
+      <h2 className="page-title" className={`change ${mode}`}>
+        Add a New Recipe
+      </h2>
       {/* Recipe Title */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="">
-          <span>Recipe Title:</span>
+          <span className={`change ${mode}`}>Recipe Title:</span>
           <input
             type="text"
             onChange={e => {
@@ -73,7 +78,7 @@ function Create() {
         {/* ingredients go here */}
 
         <label htmlFor="ingredients">
-          <span>Recipe Ingredients:</span>
+          <span className={`change ${mode}`}>Recipe Ingredients:</span>
           <div className="ingredients">
             <input
               type="text"
@@ -85,7 +90,7 @@ function Create() {
             <button onClick={handleAdd}>Add</button>
           </div>
         </label>
-        <p className="current-ingredients">
+        <p className={`current-ingredients  ${mode}`}>
           Current Ingredients:
           {ingredients.map(ingredient => (
             <em key={ingredient}> {ingredient}</em>
@@ -93,7 +98,7 @@ function Create() {
         </p>
 
         <label>
-          <span>Recipe Method:</span>
+          <span className={`change ${mode}`}>Recipe Method:</span>
           <textarea
             onChange={e => {
               setmethod(e.target.value);
@@ -104,7 +109,7 @@ function Create() {
         </label>
 
         <label htmlFor="">
-          <span>Cooking Time (Minutes):</span>
+          <span className={`change ${mode}`}>Cooking Time (Minutes):</span>
 
           <input
             type="number"

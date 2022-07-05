@@ -41,3 +41,15 @@
 /* .create .current-ingredient {
   font-size: 18px;
 } */
+
+.change.dark {
+  color: white;
+}
+
+.change.light {
+  color: #3333;
+}
+
+.current-ingredients.dark {
+  color: white;
+}
