@@ -95,3 +95,53 @@
     padding-bottom: 30px;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 892px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 892px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 668px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 668px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
+
+
+
