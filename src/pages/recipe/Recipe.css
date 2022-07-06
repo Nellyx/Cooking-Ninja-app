@@ -47,10 +47,9 @@
   color: #fff;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .recipe {
-    max-width: 500px;
+    max-width: 1050px;
     margin: 40px auto;
     text-align: center;
     background-color: #fff;
@@ -58,27 +57,96 @@
     box-sizing: border-box;
     border: 2px solid #58249c;
     border-radius: 6px;
-    text-align: center
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {
-    background: green;
+@media screen and (max-width: 992px) {
+  .recipe {
+    max-width: 892px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #58249c;
+    border-radius: 6px;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .example {
-    background: blue;
+@media screen and (max-width: 768px) {
+  .recipe {
+    max-width: 668px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #58249c;
+    border-radius: 6px;
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .example {
-    background: orange;
+@media screen and (max-width: 576px) {
+  .recipe {
+    max-width: 476px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #58249c;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .recipe {
+    max-width: 358px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #58249c;
+    border-radius: 6px;
+  }
+
+  .recipe ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .recipe .method {
+    text-align: center;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .recipe {
+    max-width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #58249c;
+    border-radius: 6px;
+  }
+
+  .recipe ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .recipe .method {
+    text-align: center;
+    line-height: 1.5em;
   }
 }

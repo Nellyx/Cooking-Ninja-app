@@ -129,9 +129,6 @@
   }
 }
 
-
-
-
 @media screen and (max-width: 768px) {
   .recipe-list {
     display: grid;
@@ -143,5 +140,34 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 476px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
 
-
+@media screen and (max-width: 428px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    max-width: 358px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .recipe-list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+}
