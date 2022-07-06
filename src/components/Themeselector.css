@@ -34,3 +34,22 @@
     margin: 20px auto;
   }
 }
+@media screen and (max-width: 992px) {
+  .theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 892px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 668px;
+    margin: 20px auto;
+  }
+}
