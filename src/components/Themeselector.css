@@ -53,3 +53,33 @@
     margin: 20px auto;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 476px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 358px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+}
