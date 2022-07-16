@@ -9,7 +9,7 @@ import "./Home.css";
 import RecipeList from "../../components/RecipeList";
 
 function Home() {
-  const [url, seturl] = useState("http://localhost:3000/recipes");
+  const [url] = useState("http://localhost:3000/recipes");
   const { data, ispending, error } = useFetch(url);
 
   return (

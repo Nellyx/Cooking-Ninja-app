@@ -16,29 +16,26 @@ function Create() {
 
   const navigate = useNavigate();
 
-  const { postData, data, error } = useFetch(
-    "http://localhost:3000/recipes",
-    "POST"
-  );
+  const { postData, data } = useFetch("http://localhost:3000/recipes", "POST");
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     postData({
       title,
       ingredients,
       method,
-      cookingTime: cookingTime + "minutes"
+      cookingTime: cookingTime + "minutes",
     });
   };
 
-  const handleAdd = e => {
+  const handleAdd = (e) => {
     e.preventDefault();
 
     const ing = newIngredient.trim();
 
     if (ing && !ingredients.includes(ing)) {
-      setingredients(previngredients => [...previngredients, ing]);
+      setingredients((previngredients) => [...previngredients, ing]);
     }
 
     setnewIngredient("");
@@ -58,16 +55,14 @@ function Create() {
 
   return (
     <div className="create">
-      <h2 className="page-title" className={`change ${mode}`}>
-        Add a New Recipe
-      </h2>
+      <h2 className={`page-title change ${mode}`}>Add a New Recipe</h2>
       {/* Recipe Title */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="">
           <span className={`change ${mode}`}>Recipe Title:</span>
           <input
             type="text"
-            onChange={e => {
+            onChange={(e) => {
               settitle(e.target.value);
             }}
             value={title}
@@ -82,7 +77,7 @@ function Create() {
           <div className="ingredients">
             <input
               type="text"
-              onChange={e => {
+              onChange={(e) => {
                 setnewIngredient(e.target.value);
               }}
               value={newIngredient}
@@ -92,7 +87,7 @@ function Create() {
         </label>
         <p className={`current-ingredients  ${mode}`}>
           Current Ingredients:
-          {ingredients.map(ingredient => (
+          {ingredients.map((ingredient) => (
             <em key={ingredient}> {ingredient}</em>
           ))}
         </p>
@@ -100,7 +95,7 @@ function Create() {
         <label>
           <span className={`change ${mode}`}>Recipe Method:</span>
           <textarea
-            onChange={e => {
+            onChange={(e) => {
               setmethod(e.target.value);
             }}
             value={method}
@@ -113,7 +108,7 @@ function Create() {
 
           <input
             type="number"
-            onChange={e => {
+            onChange={(e) => {
               setcookingTime(e.target.value);
             }}
             value={cookingTime}
