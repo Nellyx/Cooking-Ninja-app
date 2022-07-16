@@ -45,11 +45,14 @@ function Create() {
 
   // to navigate to the home route after submission
 
-  useEffect(() => {
-    if (data) {
-      navigate("/");
-    }
-  }, [data]);
+  useEffect(
+    (data) => {
+      if (data) {
+        navigate("/");
+      }
+    },
+    [navigate, data]
+  );
 
   const { mode } = useTheme();
 
