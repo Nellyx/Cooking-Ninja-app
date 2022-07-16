@@ -53,3 +53,15 @@
 .current-ingredients.dark {
   color: white;
 }
+
+@media screen and (max-width: 428px) {
+  .create {
+    max-width: 358px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .create {
+    max-width: 300px;
+  }
+}
